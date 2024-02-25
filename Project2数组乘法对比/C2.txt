@@ -1,0 +1,268 @@
+# {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare'
+[Entry Point]
+0x00000213e115ebe0: int3
+0x00000213e115ebe1: data16 data16 nopw 0x0(%rax,%rax,1)
+0x00000213e115ebec: data16 data16 xchg %ax,%ax
+0x00000213e115ebf0: mov %eax,-0x6000(%rsp)
+0x00000213e115ebf7: push %rbp
+0x00000213e115ebf8: sub $0x70,%rsp
+0x00000213e115ebfc: mov 0x18(%rdx),%r13d
+0x00000213e115ec00: mov 0x20(%rdx),%r10
+0x00000213e115ec04: mov %r10,0x58(%rsp)
+0x00000213e115ec09: mov 0x40(%rdx),%r10
+0x00000213e115ec0d: mov %r10,0x20(%rsp)
+0x00000213e115ec12: mov 0x38(%rdx),%rbp
+0x00000213e115ec16: mov 0x50(%rdx),%ebx
+0x00000213e115ec19: mov 0x30(%rdx),%r14
+0x00000213e115ec1d: mov %rdx,%rcx
+0x00000213e115ec20: movabs $0x68693400,%r10
+0x00000213e115ec2a: call *%r10
+0x00000213e115ec2d: mov 0x20(%rsp),%r10
+0x00000213e115ec32: test %r10,%r10
+0x00000213e115ec35: je L000d
+0x00000213e115ec3b: mov 0x8(%r10),%r8d
+0x00000213e115ec3f: cmp $0xf800016d,%r8d  ;   {metadata({type array int})}
+0x00000213e115ec46: jne L0012
+0x00000213e115ec4c: mov %r10,%r11
+             L0000: test %rbp,%rbp
+0x00000213e115ec52: je L000e
+0x00000213e115ec58: mov 0x8(%rbp),%r8d
+0x00000213e115ec5c: cmp $0xf800016d,%r8d  ;   {metadata({type array int})}
+0x00000213e115ec63: jne L0012
+0x00000213e115ec69: mov %rbp,%r9
+             L0001: test %r14,%r14
+0x00000213e115ec6f: je L000f
+0x00000213e115ec75: mov 0x8(%r14),%r8d
+0x00000213e115ec79: cmp $0xf800016d,%r8d  ;   {metadata({type array int})}
+0x00000213e115ec80: jne L0012  ;*iload
+                               ; - Compare::calculate_time@64 (line 22)
+             L0002: mov 0xc(%r11),%r10d  ;*iaload
+                                         ; - Compare::calculate_time@77 (line 23)
+                                         ; implicit exception: dispatches to 0x00000213e115ee81
+0x00000213e115ec8a: mov 0xc(%r9),%edx  ;*iaload
+                                       ; - Compare::calculate_time@81 (line 23)
+                                       ; implicit exception: dispatches to 0x00000213e115ee81
+0x00000213e115ec8e: mov 0xc(%r14),%ebp  ;*iastore
+                                        ; - Compare::calculate_time@83 (line 23)
+                                        ; implicit exception: dispatches to 0x00000213e115ee81
+0x00000213e115ec92: cmp %ebx,%r13d
+0x00000213e115ec95: jge L0009  ;*if_icmpge
+                               ; - Compare::calculate_time@67 (line 22)
+0x00000213e115ec9b: mov %r14d,%edi
+0x00000213e115ec9e: mov %r13d,%r8d
+0x00000213e115eca1: inc %r8d
+0x00000213e115eca4: shr $0x2,%edi
+0x00000213e115eca7: and $0x3,%edi
+0x00000213e115ecaa: xor %ecx,%ecx
+0x00000213e115ecac: cmp %ecx,%r8d
+0x00000213e115ecaf: cmovl %ecx,%r8d
+0x00000213e115ecb3: cmp %ebx,%r8d
+0x00000213e115ecb6: cmovg %ebx,%r8d
+0x00000213e115ecba: add %r8d,%edi
+0x00000213e115ecbd: neg %edi
+0x00000213e115ecbf: and $0x3,%edi
+0x00000213e115ecc2: add %r8d,%edi
+0x00000213e115ecc5: cmp %ebx,%edi
+0x00000213e115ecc7: cmovg %ebx,%edi  ;*iastore
+                                     ; - Compare::calculate_time@83 (line 23)
+             L0003: cmp %r10d,%r13d
+0x00000213e115eccd: jae L000a
+0x00000213e115ecd3: mov 0x10(%r11,%r13,4),%r8d  ;*iaload
+                                                ; - Compare::calculate_time@77 (line 23)
+0x00000213e115ecd8: cmp %edx,%r13d
+0x00000213e115ecdb: jae L000b  ;*iaload
+                               ; - Compare::calculate_time@81 (line 23)
+0x00000213e115ece1: imul 0x10(%r9,%r13,4),%r8d  ;*imul
+                                                ; - Compare::calculate_time@82 (line 23)
+0x00000213e115ece7: cmp %ebp,%r13d
+0x00000213e115ecea: jae L000c
+0x00000213e115ecf0: mov %r8d,0x10(%r14,%r13,4)  ;*iastore
+                                                ; - Compare::calculate_time@83 (line 23)
+0x00000213e115ecf5: mov %r13d,%r8d
+0x00000213e115ecf8: inc %r8d  ;*iinc
+                              ; - Compare::calculate_time@84 (line 22)
+0x00000213e115ecfb: cmp %edi,%r8d
+0x00000213e115ecfe: jge L0004  ;*if_icmpge
+                               ; - Compare::calculate_time@67 (line 22)
+0x00000213e115ed00: mov %r8d,%r13d
+0x00000213e115ed03: jmp L0003
+             L0004: cmp %ebp,%edx
+0x00000213e115ed07: mov %edx,%edi
+0x00000213e115ed09: cmovg %ebp,%edi
+0x00000213e115ed0c: cmp %r10d,%edi
+0x00000213e115ed0f: cmovg %r10d,%edi
+0x00000213e115ed13: cmp %ebx,%edi
+0x00000213e115ed15: cmovg %ebx,%edi
+0x00000213e115ed18: mov %edi,%ecx
+0x00000213e115ed1a: add $0xfffffffd,%ecx
+0x00000213e115ed1d: mov $0x80000000,%esi
+0x00000213e115ed22: cmp %ecx,%edi
+0x00000213e115ed24: cmovl %esi,%ecx
+0x00000213e115ed27: cmp %ecx,%r8d
+0x00000213e115ed2a: jge L0011
+0x00000213e115ed30: jmp L0006
+             L0005: mov %r13d,%r8d  ;*iaload
+                                    ; - Compare::calculate_time@77 (line 23)
+             L0006: vmovdqu 0x10(%r11,%r8,4),%xmm0
+0x00000213e115ed3c: vpmulld 0x10(%r9,%r8,4),%xmm0,%xmm0
+0x00000213e115ed43: vmovdqu %xmm0,0x10(%r14,%r8,4)  ;*iastore
+                                                    ; - Compare::calculate_time@83 (line 23)
+0x00000213e115ed4a: mov %r8d,%r13d
+0x00000213e115ed4d: add $0x4,%r13d  ;*iinc
+                                    ; - Compare::calculate_time@84 (line 22)
+0x00000213e115ed51: cmp %ecx,%r13d
+0x00000213e115ed54: jl L0005  ;*if_icmpge
+                              ; - Compare::calculate_time@67 (line 22)
+0x00000213e115ed56: add $0x3,%r8d  ;*iinc
+                                   ; - Compare::calculate_time@84 (line 22)
+             L0007: cmp %ebx,%r13d
+0x00000213e115ed5d: jge L0010
+0x00000213e115ed63: nop  ;*iastore
+                         ; - Compare::calculate_time@83 (line 23)
+             L0008: cmp %r10d,%r13d
+0x00000213e115ed67: jae L000a
+0x00000213e115ed69: mov 0x10(%r11,%r13,4),%r8d  ;*iaload
+                                                ; - Compare::calculate_time@77 (line 23)
+0x00000213e115ed6e: cmp %edx,%r13d
+0x00000213e115ed71: jae L000b  ;*iaload
+                               ; - Compare::calculate_time@81 (line 23)
+0x00000213e115ed73: imul 0x10(%r9,%r13,4),%r8d  ;*imul
+                                                ; - Compare::calculate_time@82 (line 23)
+0x00000213e115ed79: cmp %ebp,%r13d
+0x00000213e115ed7c: jae L000c
+0x00000213e115ed82: mov %r8d,0x10(%r14,%r13,4)  ;*iastore
+                                                ; - Compare::calculate_time@83 (line 23)
+0x00000213e115ed87: inc %r13d  ;*iinc
+                               ; - Compare::calculate_time@84 (line 22)
+0x00000213e115ed8a: cmp %ebx,%r13d
+0x00000213e115ed8d: jl L0008  ;*if_icmpge
+                              ; - Compare::calculate_time@67 (line 22)
+             L0009: mov $0xffffff65,%edx
+0x00000213e115ed94: mov %r11,0x20(%rsp)
+0x00000213e115ed99: mov %r9,0x28(%rsp)
+0x00000213e115ed9e: mov %r14,0x30(%rsp)
+0x00000213e115eda3: mov %r13d,0x3c(%rsp)
+0x00000213e115eda8: mov %ebx,0x40(%rsp)
+0x00000213e115edac: data16 xchg %ax,%ax
+0x00000213e115edaf: call 0x00000213e0ee57a0  ; OopMap{[32]=Oop [40]=Oop [48]=Oop off=468}
+                                             ;*if_icmpge
+                                             ; - Compare::calculate_time@67 (line 22)
+                                             ;   {runtime_call}
+0x00000213e115edb4: int3
+             L000a: mov $0xffffffe4,%edx
+0x00000213e115edba: mov %ebx,%ebp
+0x00000213e115edbc: mov %r9,0x28(%rsp)
+0x00000213e115edc1: mov %r14,0x40(%rsp)
+0x00000213e115edc6: mov %r13d,0x3c(%rsp)
+0x00000213e115edcb: mov %r11,0x48(%rsp)
+0x00000213e115edd0: mov %r13d,0x50(%rsp)
+0x00000213e115edd5: xchg %ax,%ax
+0x00000213e115edd7: call 0x00000213e0ee57a0  ; OopMap{[40]=Oop [64]=Oop [72]=Oop off=508}
+                                             ;*iaload
+                                             ; - Compare::calculate_time@77 (line 23)
+                                             ;   {runtime_call}
+0x00000213e115eddc: int3
+             L000b: mov $0xffffffe4,%edx
+0x00000213e115ede2: mov %ebx,%ebp
+0x00000213e115ede4: mov %r11,0x20(%rsp)
+0x00000213e115ede9: mov %r14,0x40(%rsp)
+0x00000213e115edee: mov %r13d,0x3c(%rsp)
+0x00000213e115edf3: mov %r8d,0x48(%rsp)
+0x00000213e115edf8: mov %r9,0x50(%rsp)
+0x00000213e115edfd: mov %r13d,0x4c(%rsp)
+0x00000213e115ee02: nop
+0x00000213e115ee03: call 0x00000213e0ee57a0  ; OopMap{[32]=Oop [64]=Oop [80]=Oop off=552}
+                                             ;*iaload
+                                             ; - Compare::calculate_time@81 (line 23)
+                                             ;   {runtime_call}
+0x00000213e115ee08: int3
+             L000c: mov $0xffffffe4,%edx
+0x00000213e115ee0e: mov %ebx,%ebp
+0x00000213e115ee10: mov %r11,0x20(%rsp)
+0x00000213e115ee15: mov %r9,0x28(%rsp)
+0x00000213e115ee1a: mov %r14,0x40(%rsp)
+0x00000213e115ee1f: mov %r13d,0x3c(%rsp)
+0x00000213e115ee24: mov %r8d,0x48(%rsp)
+0x00000213e115ee29: xchg %ax,%ax
+0x00000213e115ee2b: call 0x00000213e0ee57a0  ; OopMap{[32]=Oop [40]=Oop [64]=Oop off=592}
+                                             ;*iastore
+                                             ; - Compare::calculate_time@83 (line 23)
+                                             ;   {runtime_call}
+0x00000213e115ee30: int3  ;*iastore
+                          ; - Compare::calculate_time@83 (line 23)
+             L000d: xor %r11d,%r11d
+0x00000213e115ee34: jmp L0000
+             L000e: xor %r9d,%r9d
+0x00000213e115ee3c: jmp L0001
+             L000f: xor %r14d,%r14d
+0x00000213e115ee44: jmp L0002
+             L0010: mov %r8d,%r13d
+0x00000213e115ee4c: inc %r13d  ;*iinc
+                               ; - Compare::calculate_time@84 (line 22)
+0x00000213e115ee4f: jmp L0009
+             L0011: mov %r13d,%ecx
+0x00000213e115ee57: mov %r8d,%r13d
+0x00000213e115ee5a: mov %ecx,%r8d
+0x00000213e115ee5d: jmp L0007
+             L0012: mov $0xffffff9d,%edx
+0x00000213e115ee67: mov %ebx,0x20(%rsp)
+0x00000213e115ee6b: mov %r14,0x28(%rsp)
+0x00000213e115ee70: mov %r13d,0x24(%rsp)
+0x00000213e115ee75: mov %r10,0x30(%rsp)
+0x00000213e115ee7a: nop
+0x00000213e115ee7b: call 0x00000213e0ee57a0  ; OopMap{rbp=Oop [40]=Oop [48]=Oop off=672}
+                                             ;*iload
+                                             ; - Compare::calculate_time@64 (line 22)
+                                             ;   {runtime_call}
+0x00000213e115ee80: int3
+0x00000213e115ee81: mov $0xffffff86,%edx
+0x00000213e115ee86: mov %ebx,%ebp
+0x00000213e115ee88: mov %r11,0x20(%rsp)
+0x00000213e115ee8d: mov %r9,0x28(%rsp)
+0x00000213e115ee92: mov %r14,0x30(%rsp)
+0x00000213e115ee97: mov %r13d,0x38(%rsp)
+0x00000213e115ee9c: data16 xchg %ax,%ax
+0x00000213e115ee9f: call 0x00000213e0ee57a0  ; OopMap{[32]=Oop [40]=Oop [48]=Oop off=708}
+                                             ;*iload
+                                             ; - Compare::calculate_time@64 (line 22)
+                                             ;   {runtime_call}
+0x00000213e115eea4: int3  ;*iinc
+                          ; - Compare::calculate_time@84 (line 22)
+0x00000213e115eea5: hlt
+0x00000213e115eea6: hlt
+0x00000213e115eea7: hlt
+0x00000213e115eea8: hlt
+0x00000213e115eea9: hlt
+0x00000213e115eeaa: hlt
+0x00000213e115eeab: hlt
+0x00000213e115eeac: hlt
+0x00000213e115eead: hlt
+0x00000213e115eeae: hlt
+0x00000213e115eeaf: hlt
+0x00000213e115eeb0: hlt
+0x00000213e115eeb1: hlt
+0x00000213e115eeb2: hlt
+0x00000213e115eeb3: hlt
+0x00000213e115eeb4: hlt
+0x00000213e115eeb5: hlt
+0x00000213e115eeb6: hlt
+0x00000213e115eeb7: hlt
+0x00000213e115eeb8: hlt
+0x00000213e115eeb9: hlt
+0x00000213e115eeba: hlt
+0x00000213e115eebb: hlt
+0x00000213e115eebc: hlt
+0x00000213e115eebd: hlt
+0x00000213e115eebe: hlt
+0x00000213e115eebf: hlt
+[Exception Handler]
+[Stub Code]
+0x00000213e115eec0: jmp 0x00000213e0f18ca0  ;   {no_reloc}
+[Deopt Handler Code]
+0x00000213e115eec5: call 0x00000213e115eeca
+0x00000213e115eeca: subq $0x5,(%rsp)
+0x00000213e115eecf: jmp 0x00000213e0ee7600  ;   {runtime_call}
+0x00000213e115eed4: hlt
+0x00000213e115eed5: hlt
+0x00000213e115eed6: hlt
+0x00000213e115eed7: hlt

@@ -1,0 +1,737 @@
+# {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare'
+[Entry Point]
+0x00000213e1161500: mov %eax,-0x6000(%rsp)
+0x00000213e1161507: push %rbp
+0x00000213e1161508: sub $0x150,%rsp
+0x00000213e116150f: movabs $0x213f99d0788,%rsi  ;   {metadata(method data for {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161519: mov 0xdc(%rsi),%edi
+0x00000213e116151f: add $0x8,%edi
+0x00000213e1161522: mov %edi,0xdc(%rsi)
+0x00000213e1161528: movabs $0x213f99d05d0,%rsi  ;   {metadata({method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161532: and $0x1ff8,%edi
+0x00000213e1161538: cmp $0x0,%edi
+0x00000213e116153b: je L0023
+             L0000: mov %edx,0xe8(%rsp)
+0x00000213e1161548: movabs $0x7c0045658,%rdx  ;   {metadata('java/util/Random')}
+0x00000213e1161552: mov 0x60(%r15),%rax
+0x00000213e1161556: lea 0x20(%rax),%rdi
+0x00000213e116155a: cmp 0x70(%r15),%rdi
+0x00000213e116155e: ja L0024
+0x00000213e1161564: mov %rdi,0x60(%r15)
+0x00000213e1161568: mov 0xa8(%rdx),%rcx
+0x00000213e116156f: mov %rcx,(%rax)
+0x00000213e1161572: mov %rdx,%rcx
+0x00000213e1161575: shr $0x3,%rcx
+0x00000213e1161579: mov %ecx,0x8(%rax)
+0x00000213e116157c: xor %rcx,%rcx
+0x00000213e116157f: mov %ecx,0xc(%rax)
+0x00000213e1161582: xor %rcx,%rcx
+0x00000213e1161585: mov %rcx,0x10(%rax)
+0x00000213e1161589: mov %rcx,0x18(%rax)  ;*new  ; - Compare::calculate_time@0 (line 13)
+             L0001: mov %rax,%rbx
+0x00000213e1161590: movabs $0x213f99d0788,%rsi  ;   {metadata(method data for {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e116159a: addq $0x1,0x108(%rsi)
+0x00000213e11615a2: movabs $0x213f981ae78,%rbx  ;   {metadata(method data for {method} {0x00000213f9818598} '<init>' '()V' in 'java/util/Random')}
+0x00000213e11615ac: mov 0xdc(%rbx),%esi
+0x00000213e11615b2: add $0x8,%esi
+0x00000213e11615b5: mov %esi,0xdc(%rbx)
+0x00000213e11615bb: movabs $0x213f9818590,%rbx  ;   {metadata({method} {0x00000213f9818598} '<init>' '()V' in 'java/util/Random')}
+0x00000213e11615c5: and $0x7ffff8,%esi
+0x00000213e11615cb: cmp $0x0,%esi
+0x00000213e11615ce: je L0025
+             L0002: movabs $0x213f981ae78,%rbx  ;   {metadata(method data for {method} {0x00000213f9818598} '<init>' '()V' in 'java/util/Random')}
+0x00000213e11615de: addq $0x1,0x108(%rbx)
+0x00000213e11615e6: movabs $0x213f981aff0,%rbx  ;   {metadata(method data for {method} {0x00000213f9818648} 'seedUniquifier' '()J' in 'java/util/Random')}
+0x00000213e11615f0: mov 0xdc(%rbx),%esi
+0x00000213e11615f6: add $0x8,%esi
+0x00000213e11615f9: mov %esi,0xdc(%rbx)
+0x00000213e11615ff: movabs $0x213f9818640,%rbx  ;   {metadata({method} {0x00000213f9818648} 'seedUniquifier' '()J' in 'java/util/Random')}
+0x00000213e1161609: and $0x7ffff8,%esi
+0x00000213e116160f: cmp $0x0,%esi
+0x00000213e1161612: je L0026
+             L0003: mov %rax,0xd8(%rsp)
+0x00000213e1161620: jmp L0006  ;*getstatic seedUniquifier
+                               ; - java.util.Random::seedUniquifier@0 (line 112)
+                               ; - java.util.Random::<init>@1 (line 105)
+                               ; - Compare::calculate_time@4 (line 13)
+0x00000213e1161625: data16 xchg %ax,%ax
+             L0004: movabs $0x213f981aff0,%rsi  ;   {metadata(method data for {method} {0x00000213f9818648} 'seedUniquifier' '()J' in 'java/util/Random')}
+0x00000213e1161632: mov 0xe0(%rsi),%edi
+0x00000213e1161638: add $0x8,%edi
+0x00000213e116163b: mov %edi,0xe0(%rsi)
+0x00000213e1161641: movabs $0x213f9818640,%rsi  ;   {metadata({method} {0x00000213f9818648} 'seedUniquifier' '()J' in 'java/util/Random')}
+0x00000213e116164b: and $0xfff8,%edi
+0x00000213e1161651: cmp $0x0,%edi
+0x00000213e1161654: je L0027  ; OopMap{[216]=Oop off=346}
+                              ;*goto
+                              ; - java.util.Random::seedUniquifier@26 (line 116)
+                              ; - java.util.Random::<init>@1 (line 105)
+                              ; - Compare::calculate_time@4 (line 13)
+             L0005: test %eax,-0x1b11560(%rip)  # 0x00000213df650100
+                                                ;   {poll} *** SAFEPOINT POLL ***
+0x00000213e1161660: movabs $0x213f981aff0,%rsi  ;   {metadata(method data for {method} {0x00000213f9818648} 'seedUniquifier' '()J' in 'java/util/Random')}
+0x00000213e116166a: incl 0x188(%rsi)  ;*goto
+                                      ; - java.util.Random::seedUniquifier@26 (line 116)
+                                      ; - java.util.Random::<init>@1 (line 105)
+                                      ; - Compare::calculate_time@4 (line 13)
+             L0006: movabs $0x76be2b138,%rsi  ;   {oop(a 'java/util/concurrent/atomic/AtomicLong')}
+0x00000213e116167a: mov %rsi,%rbx
+0x00000213e116167d: movabs $0x213f981aff0,%rdi  ;   {metadata(method data for {method} {0x00000213f9818648} 'seedUniquifier' '()J' in 'java/util/Random')}
+0x00000213e1161687: mov 0x8(%rbx),%ebx
+0x00000213e116168a: shl $0x3,%rbx
+0x00000213e116168e: cmp 0x110(%rdi),%rbx
+0x00000213e1161695: jne L0007
+0x00000213e1161697: addq $0x1,0x118(%rdi)
+0x00000213e116169f: jmp L000b
+             L0007: cmp 0x120(%rdi),%rbx
+0x00000213e11616ab: jne L0008
+0x00000213e11616ad: addq $0x1,0x128(%rdi)
+0x00000213e11616b5: jmp L000b
+             L0008: cmpq $0x0,0x110(%rdi)
+0x00000213e11616c5: jne L0009
+0x00000213e11616c7: mov %rbx,0x110(%rdi)
+0x00000213e11616ce: movq $0x1,0x118(%rdi)
+0x00000213e11616d9: jmp L000b
+             L0009: cmpq $0x0,0x120(%rdi)
+0x00000213e11616e9: jne L000a
+0x00000213e11616eb: mov %rbx,0x120(%rdi)
+0x00000213e11616f2: movq $0x1,0x128(%rdi)
+0x00000213e11616fd: jmp L000b
+             L000a: addq $0x1,0x108(%rdi)
+             L000b: movabs $0x213f981a668,%rbx  ;   {metadata(method data for {method} {0x00000213f9747ee8} 'get' '()J' in 'java/util/concurrent/atomic/AtomicLong')}
+0x00000213e1161714: mov 0xdc(%rbx),%edi
+0x00000213e116171a: add $0x8,%edi
+0x00000213e116171d: mov %edi,0xdc(%rbx)
+0x00000213e1161723: movabs $0x213f9747ee0,%rbx  ;   {metadata({method} {0x00000213f9747ee8} 'get' '()J' in 'java/util/concurrent/atomic/AtomicLong')}
+0x00000213e116172d: and $0x7ffff8,%edi
+0x00000213e1161733: cmp $0x0,%edi
+0x00000213e1161736: je L0028
+             L000c: vmovsd 0x10(%rsi),%xmm0  ; implicit exception: dispatches to 0x00000213e1161eac
+0x00000213e1161741: vmovq %xmm0,%rbx  ;*getfield value
+                                      ; - java.util.concurrent.atomic.AtomicLong::get@1 (line 105)
+                                      ; - java.util.Random::seedUniquifier@3 (line 112)
+                                      ; - java.util.Random::<init>@1 (line 105)
+                                      ; - Compare::calculate_time@4 (line 13)
+0x00000213e1161746: movabs $0x285d320ad33fdb5,%rdi
+0x00000213e1161750: mov %rbx,%rax
+0x00000213e1161753: imul %rdi,%rax
+0x00000213e1161757: mov %rsi,%rdi
+0x00000213e116175a: movabs $0x213f981aff0,%rcx  ;   {metadata(method data for {method} {0x00000213f9818648} 'seedUniquifier' '()J' in 'java/util/Random')}
+0x00000213e1161764: mov 0x8(%rdi),%edi
+0x00000213e1161767: shl $0x3,%rdi
+0x00000213e116176b: cmp 0x140(%rcx),%rdi
+0x00000213e1161772: jne L000d
+0x00000213e1161774: addq $0x1,0x148(%rcx)
+0x00000213e116177c: jmp L0011
+             L000d: cmp 0x150(%rcx),%rdi
+0x00000213e1161788: jne L000e
+0x00000213e116178a: addq $0x1,0x158(%rcx)
+0x00000213e1161792: jmp L0011
+             L000e: cmpq $0x0,0x140(%rcx)
+0x00000213e11617a2: jne L000f
+0x00000213e11617a4: mov %rdi,0x140(%rcx)
+0x00000213e11617ab: movq $0x1,0x148(%rcx)
+0x00000213e11617b6: jmp L0011
+             L000f: cmpq $0x0,0x150(%rcx)
+0x00000213e11617c6: jne L0010
+0x00000213e11617c8: mov %rdi,0x150(%rcx)
+0x00000213e11617cf: movq $0x1,0x158(%rcx)
+0x00000213e11617da: jmp L0011
+             L0010: addq $0x1,0x138(%rcx)
+             L0011: movabs $0x213f981a788,%rdi  ;   {metadata(method data for {method} {0x00000213f9748160} 'compareAndSet' '(JJ)Z' in 'java/util/concurrent/atomic/AtomicLong')}
+0x00000213e11617f1: mov 0xdc(%rdi),%ecx
+0x00000213e11617f7: add $0x8,%ecx
+0x00000213e11617fa: mov %ecx,0xdc(%rdi)
+0x00000213e1161800: movabs $0x213f9748158,%rdi  ;   {metadata({method} {0x00000213f9748160} 'compareAndSet' '(JJ)Z' in 'java/util/concurrent/atomic/AtomicLong')}
+0x00000213e116180a: and $0x7ffff8,%ecx
+0x00000213e1161810: cmp $0x0,%ecx
+0x00000213e1161813: je L0029
+             L0012: mov %rax,%rdi
+0x00000213e116181c: mov %rbx,%rax
+0x00000213e116181f: mov %rdi,%rbx
+0x00000213e1161822: lea 0x10(%rsi),%rsi
+0x00000213e1161826: lock cmpxchg %rbx,(%rsi)
+0x00000213e116182b: mov $0x1,%esi
+0x00000213e1161830: je L0013
+0x00000213e1161836: mov $0x0,%esi  ;*invokevirtual compareAndSwapLong
+                                   ; - java.util.concurrent.atomic.AtomicLong::compareAndSet@9 (line 147)
+                                   ; - java.util.Random::seedUniquifier@18 (line 114)
+                                   ; - java.util.Random::<init>@1 (line 105)
+                                   ; - Compare::calculate_time@4 (line 13)
+             L0013: and $0x1,%esi
+0x00000213e116183e: cmp $0x0,%esi
+0x00000213e1161841: movabs $0x213f981aff0,%rsi  ;   {metadata(method data for {method} {0x00000213f9818648} 'seedUniquifier' '()J' in 'java/util/Random')}
+0x00000213e116184b: movabs $0x168,%rbx
+0x00000213e1161855: je L0014
+0x00000213e116185b: movabs $0x178,%rbx
+             L0014: mov (%rsi,%rbx,1),%rax
+0x00000213e1161869: lea 0x1(%rax),%rax
+0x00000213e116186d: mov %rax,(%rsi,%rbx,1)
+0x00000213e1161871: je L0004  ;*ifeq
+                              ; - java.util.Random::seedUniquifier@21 (line 114)
+                              ; - java.util.Random::<init>@1 (line 105)
+                              ; - Compare::calculate_time@4 (line 13)
+0x00000213e1161877: mov %rdi,0xe0(%rsp)
+0x00000213e116187f: movabs $0x213f981ae78,%rdi  ;   {metadata(method data for {method} {0x00000213f9818598} '<init>' '()V' in 'java/util/Random')}
+0x00000213e1161889: addq $0x1,0x118(%rdi)
+0x00000213e1161891: movabs $0x68702230,%r10  ;   {runtime_call}
+0x00000213e116189b: call *%r10  ;*invokestatic nanoTime
+                                ; - java.util.Random::<init>@4 (line 105)
+                                ; - Compare::calculate_time@4 (line 13)
+0x00000213e116189e: mov 0xd8(%rsp),%r8
+0x00000213e11618a6: movabs $0x213f981ae78,%rdx  ;   {metadata(method data for {method} {0x00000213f9818598} '<init>' '()V' in 'java/util/Random')}
+0x00000213e11618b0: addq $0x1,0x128(%rdx)
+0x00000213e11618b8: mov 0xe0(%rsp),%r8
+0x00000213e11618c0: xor %r8,%rax
+0x00000213e11618c3: mov %rax,%r8
+0x00000213e11618c6: mov 0xd8(%rsp),%rdx  ;*invokespecial <init>
+                                         ; - java.util.Random::<init>@8 (line 105)
+                                         ; - Compare::calculate_time@4 (line 13)
+0x00000213e11618ce: nop
+0x00000213e11618cf: call 0x00000213e0ee61a0  ; OopMap{[216]=Oop off=980}
+                                             ;*invokespecial <init>
+                                             ; - java.util.Random::<init>@8 (line 105)
+                                             ; - Compare::calculate_time@4 (line 13)
+                                             ;   {optimized virtual_call}
+0x00000213e11618d4: mov 0xd8(%rsp),%r9
+0x00000213e11618dc: mov 0xe8(%rsp),%r8d
+0x00000213e11618e4: mov %r8,%rbx
+0x00000213e11618e7: movabs $0x7c0000b68,%rdx  ;   {metadata({type array int})}
+0x00000213e11618f1: movslq %ebx,%rbx
+0x00000213e11618f4: mov %rbx,%rdi
+0x00000213e11618f7: cmp $0xffffff,%rbx
+0x00000213e11618fe: ja L002a
+0x00000213e1161904: movabs $0x17,%rsi
+0x00000213e116190e: lea (%rsi,%rbx,4),%rsi
+0x00000213e1161912: and $0xfffffffffffffff8,%rsi
+0x00000213e1161916: mov 0x60(%r15),%rax
+0x00000213e116191a: lea (%rax,%rsi,1),%rsi
+0x00000213e116191e: cmp 0x70(%r15),%rsi
+0x00000213e1161922: ja L002a
+0x00000213e1161928: mov %rsi,0x60(%r15)
+0x00000213e116192c: sub %rax,%rsi
+0x00000213e116192f: movq $0x1,(%rax)
+0x00000213e1161936: mov %rdx,%rcx
+0x00000213e1161939: shr $0x3,%rcx
+0x00000213e116193d: mov %ecx,0x8(%rax)
+0x00000213e1161940: mov %ebx,0xc(%rax)
+0x00000213e1161943: sub $0x10,%rsi
+0x00000213e1161947: je L0016
+0x00000213e116194d: xor %rbx,%rbx
+0x00000213e1161950: shr $0x3,%rsi
+             L0015: mov %rbx,0x8(%rax,%rsi,8)
+0x00000213e1161959: dec %rsi
+0x00000213e116195c: jne L0015
+             L0016: mov %rax,%r11  ;*newarray
+                                   ; - Compare::calculate_time@9 (line 14)
+0x00000213e1161961: mov %r8,%rbx
+0x00000213e1161964: movabs $0x7c0000b68,%rdx  ;   {metadata({type array int})}
+0x00000213e116196e: movslq %ebx,%rbx
+0x00000213e1161971: mov %rbx,%rdi
+0x00000213e1161974: cmp $0xffffff,%rbx
+0x00000213e116197b: ja L002b
+0x00000213e1161981: movabs $0x17,%rsi
+0x00000213e116198b: lea (%rsi,%rbx,4),%rsi
+0x00000213e116198f: and $0xfffffffffffffff8,%rsi
+0x00000213e1161993: mov 0x60(%r15),%rax
+0x00000213e1161997: lea (%rax,%rsi,1),%rsi
+0x00000213e116199b: cmp 0x70(%r15),%rsi
+0x00000213e116199f: ja L002b
+0x00000213e11619a5: mov %rsi,0x60(%r15)
+0x00000213e11619a9: sub %rax,%rsi
+0x00000213e11619ac: movq $0x1,(%rax)
+0x00000213e11619b3: mov %rdx,%rcx
+0x00000213e11619b6: shr $0x3,%rcx
+0x00000213e11619ba: mov %ecx,0x8(%rax)
+0x00000213e11619bd: mov %ebx,0xc(%rax)
+0x00000213e11619c0: sub $0x10,%rsi
+0x00000213e11619c4: je L0018
+0x00000213e11619ca: xor %rbx,%rbx
+0x00000213e11619cd: shr $0x3,%rsi
+             L0017: mov %rbx,0x8(%rax,%rsi,8)
+0x00000213e11619d6: dec %rsi
+0x00000213e11619d9: jne L0017
+             L0018: mov %rax,%r13  ;*newarray
+                                   ; - Compare::calculate_time@13 (line 15)
+0x00000213e11619de: mov %r8,%rbx
+0x00000213e11619e1: movabs $0x7c0000b68,%rdx  ;   {metadata({type array int})}
+0x00000213e11619eb: movslq %ebx,%rbx
+0x00000213e11619ee: mov %rbx,%rdi
+0x00000213e11619f1: cmp $0xffffff,%rbx
+0x00000213e11619f8: ja L002c
+0x00000213e11619fe: movabs $0x17,%rsi
+0x00000213e1161a08: lea (%rsi,%rbx,4),%rsi
+0x00000213e1161a0c: and $0xfffffffffffffff8,%rsi
+0x00000213e1161a10: mov 0x60(%r15),%rax
+0x00000213e1161a14: lea (%rax,%rsi,1),%rsi
+0x00000213e1161a18: cmp 0x70(%r15),%rsi
+0x00000213e1161a1c: ja L002c
+0x00000213e1161a22: mov %rsi,0x60(%r15)
+0x00000213e1161a26: sub %rax,%rsi
+0x00000213e1161a29: movq $0x1,(%rax)
+0x00000213e1161a30: mov %rdx,%rcx
+0x00000213e1161a33: shr $0x3,%rcx
+0x00000213e1161a37: mov %ecx,0x8(%rax)
+0x00000213e1161a3a: mov %ebx,0xc(%rax)
+0x00000213e1161a3d: sub $0x10,%rsi
+0x00000213e1161a41: je L001a
+0x00000213e1161a47: xor %rbx,%rbx
+0x00000213e1161a4a: shr $0x3,%rsi
+             L0019: mov %rbx,0x8(%rax,%rsi,8)
+0x00000213e1161a53: dec %rsi
+0x00000213e1161a56: jne L0019  ;*newarray
+                               ; - Compare::calculate_time@17 (line 16)
+             L001a: mov %r9,%rsi
+0x00000213e1161a5b: mov %r8,%rdx
+0x00000213e1161a5e: mov $0x0,%edi
+0x00000213e1161a63: mov %rax,0x138(%rsp)
+0x00000213e1161a6b: mov %r13,0x128(%rsp)
+0x00000213e1161a73: mov %r11,0x118(%rsp)
+0x00000213e1161a7b: jmp L001d  ;*iload
+                               ; - Compare::calculate_time@24 (line 17)
+             L001b: mov %edi,0x114(%rsp)
+0x00000213e1161a87: mov %edx,0x130(%rsp)
+0x00000213e1161a8e: cmp (%rsi),%rax  ; implicit exception: dispatches to 0x00000213e1161ee6
+0x00000213e1161a91: mov %rsi,%r8
+0x00000213e1161a94: movabs $0x213f99d0788,%rbx  ;   {metadata(method data for {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161a9e: movabs $0x7c0045658,%r10  ;   {metadata('java/util/Random')}
+0x00000213e1161aa8: mov %r10,0x140(%rbx)
+0x00000213e1161aaf: addq $0x1,0x148(%rbx)
+0x00000213e1161ab7: mov $0x10000,%r8d
+0x00000213e1161abd: mov %rsi,%rdx  ;*invokevirtual nextInt
+                                   ; - Compare::calculate_time@36 (line 18)
+0x00000213e1161ac0: mov %rsi,0x120(%rsp)
+0x00000213e1161ac8: nop
+0x00000213e1161ac9: nop
+0x00000213e1161aca: nop
+0x00000213e1161acb: nop
+0x00000213e1161acc: nop
+0x00000213e1161acd: nop
+0x00000213e1161ace: nop
+0x00000213e1161acf: call 0x00000213e0ee61a0  ; OopMap{[312]=Oop [288]=Oop [296]=Oop [280]=Oop off=1492}
+                                             ;*invokevirtual nextInt
+                                             ; - Compare::calculate_time@36 (line 18)
+                                             ;   {optimized virtual_call}
+0x00000213e1161ad4: mov 0x114(%rsp),%edi
+0x00000213e1161adb: movslq %edi,%r8
+0x00000213e1161ade: mov 0x118(%rsp),%r11
+0x00000213e1161ae6: cmp 0xc(%r11),%edi  ; implicit exception: dispatches to 0x00000213e1161eeb
+0x00000213e1161aea: jae L002d
+0x00000213e1161af0: mov %eax,0x10(%r11,%r8,4)  ;*iastore
+                                               ; - Compare::calculate_time@39 (line 18)
+0x00000213e1161af5: mov 0x120(%rsp),%rsi
+0x00000213e1161afd: movabs $0x213f99d0788,%r8  ;   {metadata(method data for {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161b07: movabs $0x7c0045658,%r10  ;   {metadata('java/util/Random')}
+0x00000213e1161b11: mov %r10,0x170(%r8)
+0x00000213e1161b18: addq $0x1,0x178(%r8)
+0x00000213e1161b20: mov $0x10000,%r8d
+0x00000213e1161b26: mov 0x120(%rsp),%rdx  ;*invokevirtual nextInt
+                                          ; - Compare::calculate_time@46 (line 19)
+0x00000213e1161b2e: mov %r11,0x118(%rsp)
+0x00000213e1161b36: mov %edi,0x114(%rsp)
+0x00000213e1161b3d: nop
+0x00000213e1161b3e: nop
+0x00000213e1161b3f: call 0x00000213e0ee61a0  ; OopMap{[312]=Oop [288]=Oop [296]=Oop [280]=Oop off=1604}
+                                             ;*invokevirtual nextInt
+                                             ; - Compare::calculate_time@46 (line 19)
+                                             ;   {optimized virtual_call}
+0x00000213e1161b44: mov 0x114(%rsp),%edi
+0x00000213e1161b4b: movslq %edi,%rsi
+0x00000213e1161b4e: mov 0x128(%rsp),%r13
+0x00000213e1161b56: cmp 0xc(%r13),%edi  ; implicit exception: dispatches to 0x00000213e1161efe
+0x00000213e1161b5a: jae L002e
+0x00000213e1161b60: mov %eax,0x10(%r13,%rsi,4)  ;*iastore
+                                                ; - Compare::calculate_time@49 (line 19)
+0x00000213e1161b65: inc %edi
+0x00000213e1161b67: movabs $0x213f99d0788,%rsi  ;   {metadata(method data for {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161b71: mov 0xe0(%rsi),%ebx
+0x00000213e1161b77: add $0x8,%ebx
+0x00000213e1161b7a: mov %ebx,0xe0(%rsi)
+0x00000213e1161b80: movabs $0x213f99d05d0,%rsi  ;   {metadata({method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161b8a: and $0xfff8,%ebx
+0x00000213e1161b90: cmp $0x0,%ebx
+0x00000213e1161b93: je L002f  ; OopMap{[312]=Oop [288]=Oop [280]=Oop r13=Oop off=1689}
+                              ;*goto
+                              ; - Compare::calculate_time@53 (line 17)
+             L001c: test %eax,-0x1b11a9f(%rip)  # 0x00000213df650100
+                                                ;   {poll} *** SAFEPOINT POLL ***
+0x00000213e1161b9f: movabs $0x213f99d0788,%rsi  ;   {metadata(method data for {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161ba9: incl 0x198(%rsi)  ;*goto
+                                      ; - Compare::calculate_time@53 (line 17)
+0x00000213e1161baf: mov %r13,0x128(%rsp)
+0x00000213e1161bb7: mov 0x120(%rsp),%rsi
+0x00000213e1161bbf: mov 0x130(%rsp),%edx
+             L001d: cmp %edx,%edi
+0x00000213e1161bc8: movabs $0x213f99d0788,%r8  ;   {metadata(method data for {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161bd2: movabs $0x118,%rbx
+0x00000213e1161bdc: jge L001e
+0x00000213e1161be2: movabs $0x128,%rbx
+             L001e: mov (%r8,%rbx,1),%rcx
+0x00000213e1161bf0: lea 0x1(%rcx),%rcx
+0x00000213e1161bf4: mov %rcx,(%r8,%rbx,1)
+0x00000213e1161bf8: jl L001b  ;*if_icmpge
+                              ; - Compare::calculate_time@27 (line 17)
+0x00000213e1161bfe: mov %edx,0x130(%rsp)
+0x00000213e1161c05: movabs $0x213f99d0788,%rsi  ;   {metadata(method data for {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161c0f: addq $0x1,0x1b0(%rsi)
+0x00000213e1161c17: call 0x00000213e0ee6620  ; OopMap{[312]=Oop [280]=Oop [296]=Oop off=1820}
+                                             ;*invokestatic nanoTime
+                                             ; - Compare::calculate_time@56 (line 21)
+                                             ;   {static_call}
+0x00000213e1161c1c: mov $0x0,%esi
+0x00000213e1161c21: mov 0x138(%rsp),%rdi
+0x00000213e1161c29: mov 0x128(%rsp),%r13
+0x00000213e1161c31: mov 0x118(%rsp),%r11
+0x00000213e1161c39: mov 0x130(%rsp),%edx
+0x00000213e1161c40: jmp L0021  ;*iload
+                               ; - Compare::calculate_time@64 (line 22)
+0x00000213e1161c45: data16 xchg %ax,%ax
+             L001f: movslq %esi,%rbx
+0x00000213e1161c4b: cmp 0xc(%r11),%esi  ; implicit exception: dispatches to 0x00000213e1161f28
+0x00000213e1161c4f: jae L0030
+0x00000213e1161c55: mov 0x10(%r11,%rbx,4),%ebx  ;*iaload
+                                                ; - Compare::calculate_time@77 (line 23)
+0x00000213e1161c5a: movslq %esi,%rcx
+0x00000213e1161c5d: cmp 0xc(%r13),%esi  ; implicit exception: dispatches to 0x00000213e1161f3b
+0x00000213e1161c61: jae L0031
+0x00000213e1161c67: mov 0x10(%r13,%rcx,4),%ecx  ;*iaload
+                                                ; - Compare::calculate_time@81 (line 23)
+0x00000213e1161c6c: imul %ecx,%ebx
+0x00000213e1161c6f: movslq %esi,%rcx
+0x00000213e1161c72: cmp 0xc(%rdi),%esi  ; implicit exception: dispatches to 0x00000213e1161f4e
+0x00000213e1161c75: jae L0032
+0x00000213e1161c7b: mov %ebx,0x10(%rdi,%rcx,4)  ;*iastore
+                                                ; - Compare::calculate_time@83 (line 23)
+0x00000213e1161c7f: inc %esi
+0x00000213e1161c81: movabs $0x213f99d0788,%rbx  ;   {metadata(method data for {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161c8b: mov 0xe0(%rbx),%ecx
+0x00000213e1161c91: add $0x8,%ecx
+0x00000213e1161c94: mov %ecx,0xe0(%rbx)
+0x00000213e1161c9a: movabs $0x213f99d05d0,%rbx  ;   {metadata({method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161ca4: and $0xfff8,%ecx
+0x00000213e1161caa: cmp $0x0,%ecx
+0x00000213e1161cad: je L0033  ; OopMap{r13=Oop rdi=Oop r11=Oop off=1971}
+                              ;*goto
+                              ; - Compare::calculate_time@87 (line 22)
+             L0020: test %eax,-0x1b11bb9(%rip)  # 0x00000213df650100
+                                                ;   {poll} *** SAFEPOINT POLL ***
+0x00000213e1161cb9: movabs $0x213f99d0788,%rbx  ;   {metadata(method data for {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161cc3: incl 0x1e0(%rbx)  ;*goto
+                                      ; - Compare::calculate_time@87 (line 22)
+             L0021: cmp %edx,%esi
+0x00000213e1161ccb: movabs $0x213f99d0788,%rbx  ;   {metadata(method data for {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161cd5: movabs $0x1c0,%rcx
+0x00000213e1161cdf: jge L0022
+0x00000213e1161ce5: movabs $0x1d0,%rcx
+             L0022: mov (%rbx,%rcx,1),%r8
+0x00000213e1161cf3: lea 0x1(%r8),%r8
+0x00000213e1161cf7: mov %r8,(%rbx,%rcx,1)
+0x00000213e1161cfb: jl L001f  ;*if_icmpge
+                              ; - Compare::calculate_time@67 (line 22)
+0x00000213e1161d01: mov %rax,0x140(%rsp)
+0x00000213e1161d09: movabs $0x213f99d0788,%rsi  ;   {metadata(method data for {method} {0x00000213f99d05d8} 'calculate_time' '(I)V' in 'Compare')}
+0x00000213e1161d13: addq $0x1,0x1f8(%rsi)
+0x00000213e1161d1b: nop
+0x00000213e1161d1c: nop
+0x00000213e1161d1d: nop
+0x00000213e1161d1e: nop
+0x00000213e1161d1f: call 0x00000213e0ee6620  ; OopMap{off=2084}
+                                             ;*invokestatic nanoTime
+                                             ; - Compare::calculate_time@90 (line 25)
+                                             ;   {static_call}
+0x00000213e1161d24: mov 0x140(%rsp),%rdx
+0x00000213e1161d2c: sub %rdx,%rax
+0x00000213e1161d2f: mov %rax,%rdx
+0x00000213e1161d32: movabs $0x3e8,%rcx
+0x00000213e1161d3c: mov %rcx,%rsi
+0x00000213e1161d3f: mov %rsi,%rcx
+0x00000213e1161d42: cmp $0x0,%rsi
+0x00000213e1161d46: je L0034
+0x00000213e1161d4c: movabs $0x68697a20,%r10  ;   {runtime_call}
+0x00000213e1161d56: call *%r10  ;*ldiv
+                                ; - Compare::calculate_time@103 (line 26)
+0x00000213e1161d59: add $0x150,%rsp
+0x00000213e1161d60: pop %rbp
+0x00000213e1161d61: test %eax,-0x1b11c67(%rip)  # 0x00000213df650100
+                                                ;   {poll_return} *** SAFEPOINT POLL ***
+0x00000213e1161d67: ret  ;*return
+                         ; - Compare::calculate_time@106 (line 28)
+0x00000213e1161d68: mov %eax,-0x6000(%rsp)
+0x00000213e1161d6f: push %rbp
+0x00000213e1161d70: sub $0x150,%rsp
+0x00000213e1161d77: mov 0x50(%rdx),%esi
+0x00000213e1161d7a: mov 0x48(%rdx),%rdi
+0x00000213e1161d7e: mov 0x40(%rdx),%rbx
+0x00000213e1161d82: mov 0x38(%rdx),%rax
+0x00000213e1161d86: mov 0x30(%rdx),%r8
+0x00000213e1161d8a: mov 0x28(%rdx),%r9d
+0x00000213e1161d8e: mov %rdx,%rcx
+0x00000213e1161d91: mov %esi,0x110(%rsp)
+0x00000213e1161d98: mov %rdi,0x108(%rsp)
+0x00000213e1161da0: mov %rbx,0x100(%rsp)
+0x00000213e1161da8: mov %rax,0xf8(%rsp)
+0x00000213e1161db0: mov %r8,0xf0(%rsp)
+0x00000213e1161db8: mov %r9d,0xec(%rsp)
+0x00000213e1161dc0: movabs $0x68693400,%r10  ;   {runtime_call}
+0x00000213e1161dca: call *%r10
+0x00000213e1161dcd: mov 0xec(%rsp),%r9d
+0x00000213e1161dd5: mov %r9,%rdi
+0x00000213e1161dd8: mov 0xf0(%rsp),%r8
+0x00000213e1161de0: mov %r8,%rax
+0x00000213e1161de3: mov 0xf8(%rsp),%r8
+0x00000213e1161deb: mov %r8,%r13
+0x00000213e1161dee: mov 0x100(%rsp),%rbx
+0x00000213e1161df6: mov %rbx,%r11
+0x00000213e1161df9: mov 0x108(%rsp),%r8
+0x00000213e1161e01: mov %r8,%rsi
+0x00000213e1161e04: mov 0x110(%rsp),%r8d
+0x00000213e1161e0c: mov %r8,%rdx
+0x00000213e1161e0f: mov %rax,0x138(%rsp)
+0x00000213e1161e17: mov %r13,0x128(%rsp)
+0x00000213e1161e1f: mov %r11,0x118(%rsp)
+0x00000213e1161e27: jmp L001d
+             L0023: mov %rsi,0x8(%rsp)
+0x00000213e1161e31: movq $0xffffffffffffffff,(%rsp)
+0x00000213e1161e39: call 0x00000213e10398e0  ; OopMap{off=2366}
+                                             ;*synchronization entry
+                                             ; - Compare::calculate_time@-1 (line 13)
+                                             ;   {runtime_call}
+0x00000213e1161e3e: jmp L0000
+             L0024: mov %rdx,%rdx
+0x00000213e1161e46: call 0x00000213e0f1a540  ; OopMap{off=2379}
+                                             ;*new  ; - Compare::calculate_time@0 (line 13)
+                                             ;   {runtime_call}
+0x00000213e1161e4b: jmp L0001
+             L0025: mov %rbx,0x8(%rsp)
+0x00000213e1161e55: movq $0xffffffffffffffff,(%rsp)
+0x00000213e1161e5d: call 0x00000213e10398e0  ; OopMap{rax=Oop off=2402}
+                                             ;*synchronization entry
+                                             ; - java.util.Random::<init>@-1 (line 105)
+                                             ; - Compare::calculate_time@4 (line 13)
+                                             ;   {runtime_call}
+0x00000213e1161e62: jmp L0002
+             L0026: mov %rbx,0x8(%rsp)
+0x00000213e1161e6c: movq $0xffffffffffffffff,(%rsp)
+0x00000213e1161e74: call 0x00000213e10398e0  ; OopMap{rax=Oop off=2425}
+                                             ;*synchronization entry
+                                             ; - java.util.Random::seedUniquifier@-1 (line 112)
+                                             ; - java.util.Random::<init>@1 (line 105)
+                                             ; - Compare::calculate_time@4 (line 13)
+                                             ;   {runtime_call}
+0x00000213e1161e79: jmp L0003
+             L0027: mov %rsi,0x8(%rsp)
+0x00000213e1161e83: movq $0x1a,(%rsp)
+0x00000213e1161e8b: call 0x00000213e10398e0  ; OopMap{[216]=Oop off=2448}
+                                             ;*goto
+                                             ; - java.util.Random::seedUniquifier@26 (line 116)
+                                             ; - java.util.Random::<init>@1 (line 105)
+                                             ; - Compare::calculate_time@4 (line 13)
+                                             ;   {runtime_call}
+0x00000213e1161e90: jmp L0005
+             L0028: mov %rbx,0x8(%rsp)
+0x00000213e1161e9a: movq $0xffffffffffffffff,(%rsp)
+0x00000213e1161ea2: call 0x00000213e10398e0  ; OopMap{[216]=Oop rsi=Oop off=2471}
+                                             ;*synchronization entry
+                                             ; - java.util.concurrent.atomic.AtomicLong::get@-1 (line 105)
+                                             ; - java.util.Random::seedUniquifier@3 (line 112)
+                                             ; - java.util.Random::<init>@1 (line 105)
+                                             ; - Compare::calculate_time@4 (line 13)
+                                             ;   {runtime_call}
+0x00000213e1161ea7: jmp L000c
+0x00000213e1161eac: call 0x00000213e0f1c440  ; OopMap{[216]=Oop rsi=Oop off=2481}
+                                             ;*getfield value
+                                             ; - java.util.concurrent.atomic.AtomicLong::get@1 (line 105)
+                                             ; - java.util.Random::seedUniquifier@3 (line 112)
+                                             ; - java.util.Random::<init>@1 (line 105)
+                                             ; - Compare::calculate_time@4 (line 13)
+                                             ;   {runtime_call}
+             L0029: mov %rdi,0x8(%rsp)
+0x00000213e1161eb6: movq $0xffffffffffffffff,(%rsp)
+0x00000213e1161ebe: call 0x00000213e10398e0  ; OopMap{rsi=Oop [216]=Oop off=2499}
+                                             ;*synchronization entry
+                                             ; - java.util.concurrent.atomic.AtomicLong::compareAndSet@-1 (line 147)
+                                             ; - java.util.Random::seedUniquifier@18 (line 114)
+                                             ; - java.util.Random::<init>@1 (line 105)
+                                             ; - Compare::calculate_time@4 (line 13)
+                                             ;   {runtime_call}
+0x00000213e1161ec3: jmp L0012
+             L002a: call 0x00000213e0f19ac0  ; OopMap{r9=Oop off=2509}
+                                             ;*newarray
+                                             ; - Compare::calculate_time@9 (line 14)
+                                             ;   {runtime_call}
+0x00000213e1161ecd: jmp L0016
+             L002b: call 0x00000213e0f19ac0  ; OopMap{r9=Oop r11=Oop off=2519}
+                                             ;*newarray
+                                             ; - Compare::calculate_time@13 (line 15)
+                                             ;   {runtime_call}
+0x00000213e1161ed7: jmp L0018
+             L002c: call 0x00000213e0f19ac0  ; OopMap{r9=Oop r11=Oop r13=Oop off=2529}
+                                             ;*newarray
+                                             ; - Compare::calculate_time@17 (line 16)
+                                             ;   {runtime_call}
+0x00000213e1161ee1: jmp L001a
+0x00000213e1161ee6: call 0x00000213e0f1c440  ; OopMap{rsi=Oop [296]=Oop [280]=Oop [312]=Oop off=2539}
+                                             ;*invokevirtual nextInt
+                                             ; - Compare::calculate_time@36 (line 18)
+                                             ;   {runtime_call}
+0x00000213e1161eeb: call 0x00000213e0f1c440  ; OopMap{[312]=Oop [288]=Oop [296]=Oop r11=Oop off=2544}
+                                             ;*iastore
+                                             ; - Compare::calculate_time@39 (line 18)
+                                             ;   {runtime_call}
+0x00000213e1161ef0: call 0x00000213e0f1c440  ; OopMap{[312]=Oop [288]=Oop [296]=Oop r11=Oop off=2549}
+                                             ;*iastore
+                                             ; - Compare::calculate_time@39 (line 18)
+                                             ;   {runtime_call}
+             L002d: mov %rdi,(%rsp)
+0x00000213e1161ef9: call 0x00000213e0f1cb00  ; OopMap{[312]=Oop [288]=Oop [296]=Oop r11=Oop off=2558}
+                                             ;*iastore
+                                             ; - Compare::calculate_time@39 (line 18)
+                                             ;   {runtime_call}
+0x00000213e1161efe: call 0x00000213e0f1c440  ; OopMap{[312]=Oop [288]=Oop [280]=Oop r13=Oop off=2563}
+                                             ;*iastore
+                                             ; - Compare::calculate_time@49 (line 19)
+                                             ;   {runtime_call}
+0x00000213e1161f03: call 0x00000213e0f1c440  ; OopMap{[312]=Oop [288]=Oop [280]=Oop r13=Oop off=2568}
+                                             ;*iastore
+                                             ; - Compare::calculate_time@49 (line 19)
+                                             ;   {runtime_call}
+             L002e: mov %rdi,(%rsp)
+0x00000213e1161f0c: call 0x00000213e0f1cb00  ; OopMap{[312]=Oop [288]=Oop [280]=Oop r13=Oop off=2577}
+                                             ;*iastore
+                                             ; - Compare::calculate_time@49 (line 19)
+                                             ;   {runtime_call}
+             L002f: mov %rsi,0x8(%rsp)
+0x00000213e1161f16: movq $0x35,(%rsp)
+0x00000213e1161f1e: call 0x00000213e10398e0  ; OopMap{[312]=Oop [288]=Oop [280]=Oop r13=Oop off=2595}
+                                             ;*goto
+                                             ; - Compare::calculate_time@53 (line 17)
+                                             ;   {runtime_call}
+0x00000213e1161f23: jmp L001c
+0x00000213e1161f28: call 0x00000213e0f1c440  ; OopMap{r13=Oop rdi=Oop r11=Oop off=2605}
+                                             ;*iaload
+                                             ; - Compare::calculate_time@77 (line 23)
+                                             ;   {runtime_call}
+0x00000213e1161f2d: call 0x00000213e0f1c440  ; OopMap{r13=Oop rdi=Oop r11=Oop off=2610}
+                                             ;*iaload
+                                             ; - Compare::calculate_time@77 (line 23)
+                                             ;   {runtime_call}
+             L0030: mov %rsi,(%rsp)
+0x00000213e1161f36: call 0x00000213e0f1cb00  ; OopMap{r13=Oop rdi=Oop r11=Oop off=2619}
+                                             ;*iaload
+                                             ; - Compare::calculate_time@77 (line 23)
+                                             ;   {runtime_call}
+0x00000213e1161f3b: call 0x00000213e0f1c440  ; OopMap{r13=Oop rdi=Oop r11=Oop off=2624}
+                                             ;*iaload
+                                             ; - Compare::calculate_time@81 (line 23)
+                                             ;   {runtime_call}
+0x00000213e1161f40: call 0x00000213e0f1c440  ; OopMap{r13=Oop rdi=Oop r11=Oop off=2629}
+                                             ;*iaload
+                                             ; - Compare::calculate_time@81 (line 23)
+                                             ;   {runtime_call}
+             L0031: mov %rsi,(%rsp)
+0x00000213e1161f49: call 0x00000213e0f1cb00  ; OopMap{r13=Oop rdi=Oop r11=Oop off=2638}
+                                             ;*iaload
+                                             ; - Compare::calculate_time@81 (line 23)
+                                             ;   {runtime_call}
+0x00000213e1161f4e: call 0x00000213e0f1c440  ; OopMap{r13=Oop rdi=Oop r11=Oop off=2643}
+                                             ;*iastore
+                                             ; - Compare::calculate_time@83 (line 23)
+                                             ;   {runtime_call}
+0x00000213e1161f53: call 0x00000213e0f1c440  ; OopMap{r13=Oop rdi=Oop r11=Oop off=2648}
+                                             ;*iastore
+                                             ; - Compare::calculate_time@83 (line 23)
+                                             ;   {runtime_call}
+             L0032: mov %rsi,(%rsp)
+0x00000213e1161f5c: call 0x00000213e0f1cb00  ; OopMap{r13=Oop rdi=Oop r11=Oop off=2657}
+                                             ;*iastore
+                                             ; - Compare::calculate_time@83 (line 23)
+                                             ;   {runtime_call}
+             L0033: mov %rbx,0x8(%rsp)
+0x00000213e1161f66: movq $0x57,(%rsp)
+0x00000213e1161f6e: call 0x00000213e10398e0  ; OopMap{r13=Oop rdi=Oop r11=Oop off=2675}
+                                             ;*goto
+                                             ; - Compare::calculate_time@87 (line 22)
+                                             ;   {runtime_call}
+0x00000213e1161f73: jmp L0020
+             L0034: call 0x00000213e0f1c680  ; OopMap{off=2685}
+                                             ;*ldiv
+                                             ; - Compare::calculate_time@103 (line 26)
+                                             ;   {runtime_call}
+0x00000213e1161f7d: nop
+0x00000213e1161f7e: nop
+0x00000213e1161f7f: mov 0x2b0(%r15),%rax
+0x00000213e1161f86: movabs $0x0,%r10
+0x00000213e1161f90: mov %r10,0x2b0(%r15)
+0x00000213e1161f97: movabs $0x0,%r10
+0x00000213e1161fa1: mov %r10,0x2b8(%r15)
+0x00000213e1161fa8: add $0x150,%rsp
+0x00000213e1161faf: pop %rbp
+0x00000213e1161fb0: jmp 0x00000213e0f18320  ;   {runtime_call}
+0x00000213e1161fb5: hlt
+0x00000213e1161fb6: hlt
+0x00000213e1161fb7: hlt
+0x00000213e1161fb8: hlt
+0x00000213e1161fb9: hlt
+0x00000213e1161fba: hlt
+0x00000213e1161fbb: hlt
+0x00000213e1161fbc: hlt
+0x00000213e1161fbd: hlt
+0x00000213e1161fbe: hlt
+0x00000213e1161fbf: hlt
+[Stub Code]
+0x00000213e1161fc0: nop  ;   {no_reloc}
+0x00000213e1161fc1: nop
+0x00000213e1161fc2: nop
+0x00000213e1161fc3: nop
+0x00000213e1161fc4: nop
+0x00000213e1161fc5: movabs $0x0,%rbx  ;   {static_stub}
+             L0035: jmp L0035  ;   {runtime_call}
+0x00000213e1161fd4: nop
+0x00000213e1161fd5: movabs $0x0,%rbx  ;   {static_stub}
+             L0036: jmp L0036  ;   {runtime_call}
+0x00000213e1161fe4: nop
+0x00000213e1161fe5: movabs $0x0,%rbx  ;   {static_stub}
+             L0037: jmp L0037  ;   {runtime_call}
+0x00000213e1161ff4: nop
+0x00000213e1161ff5: movabs $0x0,%rbx  ;   {static_stub}
+             L0038: jmp L0038  ;   {runtime_call}
+0x00000213e1162004: nop
+0x00000213e1162005: movabs $0x0,%rbx  ;   {static_stub}
+             L0039: jmp L0039  ;   {runtime_call}
+[Exception Handler]
+0x00000213e1162014: call 0x00000213e0f1bd60  ;   {runtime_call}
+0x00000213e1162019: mov %rsp,-0x28(%rsp)
+0x00000213e116201e: sub $0x80,%rsp
+0x00000213e1162025: mov %rax,0x78(%rsp)
+0x00000213e116202a: mov %rcx,0x70(%rsp)
+0x00000213e116202f: mov %rdx,0x68(%rsp)
+0x00000213e1162034: mov %rbx,0x60(%rsp)
+0x00000213e1162039: mov %rbp,0x50(%rsp)
+0x00000213e116203e: mov %rsi,0x48(%rsp)
+0x00000213e1162043: mov %rdi,0x40(%rsp)
+0x00000213e1162048: mov %r8,0x38(%rsp)
+0x00000213e116204d: mov %r9,0x30(%rsp)
+0x00000213e1162052: mov %r10,0x28(%rsp)
+0x00000213e1162057: mov %r11,0x20(%rsp)
+0x00000213e116205c: mov %r12,0x18(%rsp)
+0x00000213e1162061: mov %r13,0x10(%rsp)
+0x00000213e1162066: mov %r14,0x8(%rsp)
+0x00000213e116206b: mov %r15,(%rsp)
+0x00000213e116206f: movabs $0x68a6f990,%rcx  ;   {external_word}
+0x00000213e1162079: movabs $0x213e1162019,%rdx  ;   {internal_word}
+0x00000213e1162083: mov %rsp,%r8
+0x00000213e1162086: and $0xfffffffffffffff0,%rsp
+0x00000213e116208a: movabs $0x6874da00,%r10  ;   {runtime_call}
+0x00000213e1162094: call *%r10
+0x00000213e1162097: hlt
+[Deopt Handler Code]
+0x00000213e1162098: movabs $0x213e1162098,%r10  ;   {section_word}
+0x00000213e11620a2: push %r10
+0x00000213e11620a4: jmp 0x00000213e0ee7600  ;   {runtime_call}
+0x00000213e11620a9: hlt
+0x00000213e11620aa: hlt
+0x00000213e11620ab: hlt
+0x00000213e11620ac: hlt
+0x00000213e11620ad: hlt
+0x00000213e11620ae: hlt
+0x00000213e11620af: hlt
