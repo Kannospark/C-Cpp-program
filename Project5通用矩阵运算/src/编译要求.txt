@@ -1,0 +1,1 @@
+cc -o test-openblas test-openblas.c -I /usr/include/ -L/usr/lib -lopenblas -lpthread -lgfortran

@@ -1,0 +1,3 @@
+/mnt/g/cpp_program/Project2/CMakeFiles/testtime.dir
+/mnt/g/cpp_program/Project2/CMakeFiles/edit_cache.dir
+/mnt/g/cpp_program/Project2/CMakeFiles/rebuild_cache.dir

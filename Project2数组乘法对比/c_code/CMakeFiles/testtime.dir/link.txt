@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/testtime.dir/test1.c.o -o testtime 
